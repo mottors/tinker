@@ -1,7 +1,7 @@
 {
 	"private": false,
   "name": "@mottors/tinker",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Guia de estilo para os produtos da Mottors.",
   "main": "index.js",
   "scripts": {
