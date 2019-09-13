@@ -1,0 +1,67 @@
+.navbar {
+	&-trigger {
+		padding: 0 1rem;
+		font-size: 1.25rem;
+		border-right: solid 1px $color-gray-200;
+
+		@include media-breakpoint-up(xl) {
+			display: none;
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+		display: block !important;
+		margin-left: 1.5rem;
+	}
+
+	@include media-breakpoint-down(lg) {
+		display: none;
+		position: absolute;
+		z-index: 100;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background: $color-light;
+		border-top: solid 1px $color-gray-200;
+	}
+}
+
+.menubar {
+	display: block;
+	$item: & + '-item';
+
+	#{$item} {
+		list-style-type: none;
+		color: $color-text;
+
+		&.is-highlight {
+			color: $color-primary;
+		}
+
+		a {
+			display: block;
+			padding: 1.75rem 0;
+			color: inherit;
+			font-weight: 700;
+			line-height: 1;
+
+			&:hover, &:focus {
+				color: $color-primary;
+				text-decoration: none;
+			}
+
+			@include media-breakpoint-down(lg) {
+				padding: 1rem;
+				text-align: center;
+			}
+		}
+
+		@include media-breakpoint-up(xl) {
+			display: inline-block;
+
+			+ #{$item} {
+				margin-left: 2rem;
+			}
+		}
+	}
+}

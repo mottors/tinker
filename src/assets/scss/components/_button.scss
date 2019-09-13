@@ -1,0 +1,88 @@
+$buttons: (
+	primary: ($color-light, $color-primary),
+	info: ($color-light, $color-info),
+	danger: ($color-light, $color-danger),
+	warning: ($color-light, $color-warning),
+	success: ($color-light, $color-success),
+	light: ($color-dark, $color-light),
+	dark: ($color-light, $color-dark)
+);
+
+.btn {
+	display: inline-block;
+	padding: .5rem .75rem;
+	color: $color-dark;
+	font-weight: 500;
+	text-align: center;
+	background-color: $color-button-default;
+	border: 1px solid transparent;
+	outline: 0;
+
+	&:hover, &:focus {
+		background-color: darken($color-button-default, 5%);
+		text-decoration: none;
+	}
+
+	&:active {
+		background-color: darken($color-button-default, 10%);
+	}
+
+	&-sm {
+		padding: .375rem .5rem;
+		font-size: .75rem;
+	}
+
+	&-md {
+		padding: .675rem 1rem;
+		font-size: 1.25rem;
+	}
+
+	&-lg {
+		padding: .875rem 1.25rem;
+		font-size: 1.5rem;
+	}
+
+	&-rounded {
+		border-radius: 8px;
+	}
+
+	&-block {
+		display: block;
+		width: 100%;
+	}
+
+	&[disabled] {
+		opacity: .8;
+		cursor: not-allowed;
+	}
+
+	&-bold {
+		font-weight: 700;
+	}
+
+	&-link {
+		color: $color-anchor;
+		background-color: transparent;
+
+		&:hover, &:focus {
+			text-decoration: underline;
+			background-color: transparent;
+		}
+
+		&:active {
+			background-color: transparent;
+		}
+	}
+
+	@each $key in map-keys($buttons) {
+		&-#{$key} {
+			@include button-generator(nth(map-get($buttons, $key), 1), nth(map-get($buttons, $key), 2));
+		}
+	}
+
+	@each $key in map-keys($buttons) {
+		&-text-#{$key} {
+			@include button-text-generator(nth(map-get($buttons, $key), 2));
+		}
+	}
+}

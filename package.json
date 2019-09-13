@@ -1,0 +1,24 @@
+{
+	"private": false,
+  "name": "@mottors/tinker",
+  "version": "1.0.0",
+  "description": "Guia de estilo para os produtos da Mottors.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mottors/tinker.git"
+  },
+  "keywords": [
+    "tinker",
+    "mottors"
+  ],
+  "author": "reidark",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mottors/tinker/issues"
+  },
+  "homepage": "https://github.com/mottors/tinker#readme"
+}

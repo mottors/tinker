@@ -1,0 +1,35 @@
+.pagination {
+	display: flex;
+
+	> li {
+		list-style-type: none;
+
+		a {
+			display: block;
+			height: 32px;
+			padding: 0 .75rem;
+			line-height: 32px;
+			text-align: center;
+			border: 1px solid $color-gray-200;
+
+			&:hover, &:focus {
+				background: $color-gray-200;
+				text-decoration: none;
+			}
+		}
+
+		&.active {
+			a {
+				color: $color-dark;
+				background: $color-gray-200;
+				pointer-events: none;
+			}
+		}
+
+		+ li {
+			a {
+				border-left: 0;
+			}
+		}
+	}
+}

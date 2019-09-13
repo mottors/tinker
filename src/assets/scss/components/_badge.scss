@@ -1,0 +1,57 @@
+$badges: (
+	info: ($color-light, $color-info),
+	danger: ($color-light, $color-danger),
+	warning: ($color-light, $color-warning),
+	success: ($color-light, $color-success),
+	light: ($color-dark, $color-light),
+	dark: ($color-light, $color-dark)
+);
+
+.badge {
+	display: inline-block;
+	padding: .5rem .75rem;
+	color: $color-dark;
+	font-weight: 500;
+	text-align: center;
+	background-color: $color-button-default;
+	border: 1px solid transparent;
+
+	&-sm {
+		padding: .375rem .5rem;
+		font-size: .75rem;
+	}
+
+	&-md {
+		padding: .675rem 1rem;
+		font-size: 1.25rem;
+	}
+
+	&-lg {
+		padding: .875rem 1.25rem;
+		font-size: 1.5rem;
+	}
+
+	&-rounded {
+		border-radius: 8px;
+	}
+
+	&-block {
+		display: block;
+		width: 100%;
+	}
+
+	&[disabled] {
+		opacity: .8;
+		cursor: not-allowed;
+	}
+
+	&-bold {
+		font-weight: 700;
+	}
+
+	@each $key in map-keys($badges) {
+		&-#{$key} {
+			@include badge-generator(nth(map-get($badges, $key), 1), nth(map-get($badges, $key), 2));
+		}
+	}
+}

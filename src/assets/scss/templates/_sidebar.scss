@@ -1,0 +1,29 @@
+.sidebar {
+	iframe {
+		width: 100%;
+		vertical-align: middle;
+	}
+
+	&-panel {
+		margin-bottom: 2rem;
+		border: solid 1px $color-gray-200;
+
+		&-content {
+			padding: 1rem;
+			background: $color-light;
+
+			.tnp {
+				margin-top: 1rem;
+			}
+		}
+
+		&-title {
+			margin: -1rem -1rem 1.15rem;
+			padding: .75rem 1rem;
+			color: $color-light;
+			font-size: 1.15rem;
+			text-align: center;
+			background: $color-primary;
+		}
+	}
+}

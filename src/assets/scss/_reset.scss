@@ -1,0 +1,130 @@
+:root,
+html {
+	font-size: 16px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+
+	&::before,
+	&::after {
+		box-sizing: border-box;
+	}
+}
+
+html,
+body {
+	width: 100%;
+}
+
+body {
+	color: $color-text;
+	font-family: $font-family-primary;
+	font-size: $font-size-default;
+	font-weight: 400;
+	font-style: normal;
+	line-height: $line-height-size-default;
+	text-rendering: optimizelegibility;
+	background-color: $color-blue-100;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+p {
+	+ p {
+		margin-top: 1rem;
+	}
+}
+
+ul {
+	&.row {
+		list-style-type: none;
+	}
+}
+
+a {
+	color: $color-anchor;
+	text-decoration: none;
+
+	&:hover, &:focus {
+		text-decoration: underline;
+	}
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+strong,
+b {
+	font-weight: 700;
+}
+
+em {
+	font-style: italic;
+}
+
+button,
+input[type="submit"] {
+	font-family: $font-family-primary;
+	font-size: $font-size-default;
+	background: none;
+	cursor: pointer;
+}
+
+input,
+textarea,
+select {
+	font-family: $font-family-primary;
+	font-size: $font-size-default;
+}
+
+input[type="search"] {
+	appearance: none;
+}
+
+textarea {
+	resize: vertical;
+}
+
+iframe {
+	position: relative;
+}
+
+pre {
+	margin-bottom: 1rem;
+	padding: 1rem;
+	background: $color-light;
+	border: 1px solid $color-gray-300;
+	border-radius: 8px;
+}
+
+[tabindex="-1"]:focus {
+	outline: 0 !important;
+}
+
+.header,
+.main,
+.footer {
+	display: block;
+	width: 100%;
+	clear: both;
+}

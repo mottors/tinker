@@ -1,0 +1,65 @@
+// Clearfix
+
+@mixin clearfix {
+	&:after {
+		display: table;
+		clear: both;
+		content: '';
+	}
+}
+
+.clearfix {
+	@include clearfix;
+}
+
+// Float
+
+.float-left {
+	float: left !important;
+}
+
+.float-right {
+	float: right !important;
+}
+
+// Height 100%
+
+.h-100 {
+	height: 100%;
+}
+
+// Grid Margin
+
+.mt-default {
+	margin-top: 2rem !important;
+}
+
+.mr-default {
+	margin-right: 2rem !important;
+}
+
+.mb-default {
+	margin-bottom: 2rem !important;
+}
+
+.ml-default {
+	margin-left: 2rem !important;
+}
+
+// Grid Padding
+
+.pt-default {
+	padding-top: 2rem !important;
+}
+
+.pr-default {
+	padding-right: 2rem !important;
+}
+
+.pb-default {
+	padding-bottom: 2rem !important;
+}
+
+.pl-default {
+	padding-left: 2rem !important;
+}
