@@ -46,6 +46,10 @@ $buttons: (
 		border-radius: 8px;
 	}
 
+	&-bordered {
+		border-bottom: 2.5px solid rgba($color-dark, .5);
+	}
+
 	&-block {
 		display: block;
 		width: 100%;
